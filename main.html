@@ -30,14 +30,15 @@
         <main class="mt-10">
             <section>
                 <h2 class="text-3xl font-bold ">Welcome to Payoo</h2>
-                <p class="text-xl mt-2 ">Enjoy easy and convenient financial services with us. Cashout charge is low and safe.</p>
+                <p class="text-xl mt-2 ">Enjoy easy and convenient financial services with us. Cashout charge is low and
+                    safe.</p>
 
                 <section class="grid grid-cols-3 gap-1 mt-7">
-                    <div class="bg-slate-50 rounded-xl p-4 text-center cursor-pointer hover:bg-lime-200">
+                    <div id="add-money-box" class="bg-slate-50 rounded-xl p-4 text-center cursor-pointer hover:bg-lime-200">
                         <img class="mx-auto" src="./assets/wallet1.png" alt="">
                         <h1>Add money</h1>
                     </div>
-                    <div class="bg-slate-50 rounded-xl p-4 text-center cursor-pointer hover:bg-lime-200">
+                    <div id="cashout-money-box" class="bg-slate-50 rounded-xl p-4 text-center cursor-pointer hover:bg-lime-200">
                         <img class="mx-auto" src="./assets/send1.png" alt="">
                         <h1>Cashout</h1>
                     </div>
@@ -60,8 +61,8 @@
                 </section>
             </section>
 
-            <section class="mt-12">
-                <h2>
+            <section id="addmoney-section" class="mt-12">
+                <h2 class="text-3xl font-bold">
                     Add Money
                 </h2>
                 <div>
@@ -109,9 +110,51 @@
                     </div>
                 </div>
             </section>
+
+            <section id="cashout-section" class="mt-12">
+                <h2 class="text-3xl font-bold">
+                    Cash Out
+                </h2>
+                <div>
+                    <div class="hero-content flex-col lg:flex-row-reverse">
+                        <div class="card w-full max-w-sm shrink-0 shadow-2xl">
+                            <form class="card-body ">                                
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text">Mobile Number</span>
+                                    </label>
+                                    <input id="phone-number" value="12345678911" type="number"
+                                        placeholder="Your Phone Number" class="input input-bordered" required />
+                                </div>
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text">Amount</span>
+                                    </label>
+                                    <input id="amount" type="number" placeholder="Your amount"
+                                        class="input input-bordered" required />
+                                </div>
+                                <div class="form-control mt-1">
+                                    <label class="label">
+                                        <span class="label-text">4 Digit Pin</span>
+                                    </label>
+                                    <input id="pin" value="1234" type="password" placeholder="password"
+                                        class="input input-bordered" required />
+                                    <label class="label mt-1">
+                                        <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                                    </label>
+                                </div>
+                                <div class="form-control mt-1">
+                                    <button id="cash-out-btn" class="btn btn-primary">Cash Out</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
     </section>
     <script src="./script/addMoney.js"></script>
+    <script src="./script/toggle.js"></script>
 </body>
 
 </html>
